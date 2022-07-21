@@ -133,7 +133,7 @@ resource "aws_security_group" "allow_all" {
 #     tags = {
 #         Name = "Server-1"
 #         Env = "Prod"
-#         Owner = "Prashanth-sv"
+#         Owner = "Prath-sv"
 # 	CostCenter = "ABCD"
 #     }
 # }
