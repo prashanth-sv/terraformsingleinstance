@@ -35,3 +35,4 @@ variable "instance_type" {
     prod = "t2.micro"
     }
 }
+variable "imagename" {}
