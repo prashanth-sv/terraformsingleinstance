@@ -36,3 +36,6 @@ variable "instance_type" {
     }
 }
 
+variable  "imagename" {}
+variable  "bucket1name" {}
+
