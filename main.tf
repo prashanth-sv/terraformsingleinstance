@@ -22,8 +22,8 @@ terraform {
     bucket = "yuhwyesh"
     key = "terraformsingleinstance.tfstate"
     region = "us-east-1"
-    #dynamodb_table = "terraform-up-and-running-locks"
-   # encrypt        = true
+    dynamodb_table = "terraform-up-and-running-locks"
+    encrypt        = true
   }
 }
 
@@ -33,14 +33,14 @@ resource "aws_vpc" "default" {
     enable_dns_hostnames = true
     tags = {
         Name = "${var.vpc_name}"
-	Owner = "Prashanth-svvv"
-	environment = "${var.environment}"
+        Owner = "Prashanth-svvv"
+        environment = "${var.environment}"
     }
 }
 
 resource "aws_internet_gateway" "default" {
     vpc_id = "${aws_vpc.default.id}"
-	tags = {
+        tags = {
         Name = "${var.IGW_name}"
     }
 }
@@ -73,7 +73,7 @@ resource "aws_subnet" "subnet3-public" {
     tags = {
         Name = "${var.public_subnet3_name}"
     }
-	
+
 }
 
 
@@ -131,12 +131,12 @@ resource "aws_security_group" "allow_all" {
 #     key_name = "LaptopKey"
 #     subnet_id = "${aws_subnet.subnet1-public.id}"
 #     vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
-#     associate_public_ip_address = true	
+#     associate_public_ip_address = true
 #     tags = {
 #         Name = "Server-1"
 #         Env = "Prod"
 #         Owner = "Prath-sv"
-# 	CostCenter = "ABCD"
+#       CostCenter = "ABCD"
 #     }
 # }
 
