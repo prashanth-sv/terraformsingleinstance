@@ -19,7 +19,7 @@ provider "aws" {
 # Script for keep tfstate file in Cloud
 terraform {
   backend "s3" {
-    bucket = "yuhwyesh1"
+    bucket = "yuhwyesh"
     key = "terraformsingleinstance.tfstate"
     region = "us-east-1"
     # dynamodb_table = "terraform-up-and-running-locks"
